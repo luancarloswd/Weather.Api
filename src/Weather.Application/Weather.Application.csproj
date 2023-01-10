@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Weather.Domain\Weather.Domain.csproj" />
+      <ProjectReference Include="..\Weather.Proxy.Atlas\Weather.Proxy.Atlas.csproj" />
+      <ProjectReference Include="..\Weather.Proxy.ViaCep\Weather.Proxy.ViaCep.csproj" />
+      <ProjectReference Include="..\Weather.Repository\Weather.Repository.csproj" />
+    </ItemGroup>
+
+</Project>
