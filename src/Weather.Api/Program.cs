@@ -8,8 +8,14 @@ builder.Services.AddAtlasProxy(builder.Configuration);
 builder.Services.AddApplication();
 builder.Services.AddControllers();
 
+builder.Services.AddCors(opt => opt.AddDefaultPolicy(p => 
+    p.AllowAnyOrigin()
+    .AllowAnyHeader()
+    .AllowAnyMethod()));
+
 var app = builder.Build();
 
 app.MapControllers();
+app.UseCors();
 
 app.Run();
